@@ -1,0 +1,75 @@
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="hu">
+    <info>
+        <title>Helló, Conway!</title>
+        <keywordset>
+            <keyword/>
+        </keywordset>
+    </info>
+    <section>
+        <title>Hangyaszimulációk</title>
+        <para>
+            Írj Qt C++-ban egy hangyaszimulációs programot, a forrásaidról utólag reverse engineering jelleggel
+            készíts UML osztálydiagramot is!
+        </para>
+        <para>
+            Megoldás videó: <link xlink:href="https://bhaxor.blog.hu/2018/10/10/myrmecologist">https://bhaxor.blog.hu/2018/10/10/myrmecologist</link>
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/tree/master/7.1">Itt</link>               
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: A program a hangyák viselkedését próbálja meg utánozni. A képernyő cellákra bontódik, ezután a hangyák megkeresik azt az egyedet, akinek a legerősebb a szaga és elindulnak abba az irányba. Ennek a programnak a fordításához szükséges a Qt. Ennek a programnak meglehetősen testreszabhatóak a tulajdonságai. Ezeket megtalálhatjuk a main.cpp-ben leírva. W kapcsoló a szélességet befolyásolhatja, m kapcsolóval meg tudjuk adni a magasságot, az n kapcsoló arra szolgál hogy megadjuk a hangyák számát, a t a sebességüket, p a párolgás mértékét, f a feromonszintet, másképp a hagyott nyom értéke, s a hagyott nyom értéke a szomszédokban, d az alapérték vagyis az induló érték a cellákban, a kapcsolóval a maximum mennyiségű cellákat tudjuk befolyásolni, i-vel pedig a minimumot, a c kapcsolóval pedig a cellaméretet tudjuk megadni.
+        </para>            
+    </section>        
+    <section>
+        <title>Java életjáték</title>
+        <para>
+            Írd meg Java-ban a John Horton Conway-féle életjátékot, 
+            valósítsa meg a sikló-kilövőt!
+        </para>
+        <para>
+            Megoldás videó: 
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/7.2.java">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/7.2.java</link>               
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ugyanaz az elven működik mint a C++ életjáték, csak Javában. John Horton Conway által behozott
+                                                    szabályok ugyanazok mint a C++ verzióban.
+        </para>            
+    </section>        
+    <section>
+        <title>Qt C++ életjáték</title>
+        <para>
+            Most Qt C++-ban!
+        </para>
+        <para>
+            Megoldás videó: 
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/tree/master/7.3">Itt</link>               
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: John Horton Conway konstruálta meg a neumanni értelemben vett önreprodukáló gépeket 1970-ben. Életjáték a neve. A 2D-s tér nem végtelen, hanem periodikus határfeltétellel működik, azaz ami fent elhagyja a képernyőt az alul vissza fog jönni.
+A játékostól nem kér inputot, magától történik a játék. Egy sejt meghal, ha kevesebb mint kettő élő
+szomszéddal rendelkezik. Háromféle entitás van a játékban, "Oscillator", "Still life" és "Spaceship".
+Bizonyos lépésszám után az "Oscillator" visszatér kezdeti alakjához. A "Still life"-ok nem csinálnak
+semmit se, a "Spaceship"-ek pedig tudnak mozogni.
+        </para>            
+    </section>        
+    <section>
+        <title>BrainB Benchmark</title>
+        <para>
+        </para>
+        <para>
+            Megoldás videó: 
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/tree/master/7.4">Itt</link>               
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ez a program egy teszt ami a fókuszáló képességünket méri le, mennyire vagyunk képesek zavaró tényezők mellett is koncentrálni, ami azt szolgálja hogy mennyire lennék jó esportolók. A játékosnak követnie kell a saját karakterét és közben pedig figyel olyan dolgokat hogy hányszor vesztjük szem elől a karakterünket és meddig tart újra megtalálni. Ezt követően a játékos kap egy összesített pontszámot, ami értékeli a teljesítményét. Nincs bebizonyítva viszont hogy ez tényleg leméri e mennyire lennék jó esportban.
+        </para>            
+    </section>        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</chapter>                

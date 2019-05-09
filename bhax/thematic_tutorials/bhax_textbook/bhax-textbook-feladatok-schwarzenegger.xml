@@ -1,0 +1,69 @@
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="hu">
+    <info>
+        <title>Helló, Schwarzenegger!</title>
+        <keywordset>
+            <keyword/>
+        </keywordset>
+    </info>
+
+    <section>
+        <title>Szoftmax Py MNIST</title>
+        <para>
+            Python
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:  <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/szoftmax.py">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/szoftmax.py</link>     
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ehhez a programhoz a tenserflowra lesz szükségünk, mivel az MNIST egy tenserflow alapú könyvtár.
+            Az a lényege hogy mesterséges inteligenciákat (Artifical intelligence) lehet rajtuk tesztelni, és "edzeni".
+            A program nem feltétlenül teljesen pontos, de viszont minél nagyobb mennyiségű mintát adunk meg neki,
+            annál jobban képes lesz pontosabb megoldást biztosítani. Ebben a feladatban számokat tanítunk meg
+            "kiolvasni" a programnak. Érdekes megjegyezni hogy hasonló módszert használnak arra is hogy valakinek
+            felismerjék az aláírását elektornikusan. Itt is a pontosság jobb lesz ha több aláírást adunk be
+            a programnak.
+        </para>
+    </section>        
+
+    <section>
+        <title>Mély MNIST</title>
+        <para>
+            Python            
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/deep_mnist.py">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/deep_mnist.py</link>     
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ugyanaz mint az előző program, viszont itt komplexebb számokkal is képes dolgozni, mivel több rétegen
+            is átmennek a számok, és ezek után miután az összes kielemezte meghozza meg a döntését. El lehet mondani
+            hogy emiatt pontosabb is a megítélés. Természetesen ehhez a programhoz is szükséges a tenserflow telepítése 
+            mivel az adatbázisából dolgozik.
+        </para>
+    </section>        
+            
+    <section>
+        <title>Minecraft Malmö</title>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Microsoft/malmo">https://github.com/Microsoft/malmo</link>     
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat:A Minecraft Malmo egy fejlett mesterséges intelligencia fejlesztésére a próbálkozás.
+            Tesztelik hogy egy komplex környezetben hogyan lehet AI-t csinálni, Minecraftra építve. 
+            Hatalmas variáció van amire meg lehet tanítani az AI-t Minecraftban mivel akár mehetünk
+            végtelenségig egyenen, felfedezhetjük a környezetünket, végigmehetünk egy dungeonon, 
+            vagy építkezünk, akár hatalmas monumentumok felépítésére is megtaníthatjuk a karaktert.
+            Nyitott forráskódú tehát bárki aki szeretne ezzel foglalkozni megteheti. A Microsoft 
+            indította néhány évvel ezelőtt. Sok programozási nyelveket támogat, például java, C#, C++.
+        </para>
+    </section>        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+</chapter>                

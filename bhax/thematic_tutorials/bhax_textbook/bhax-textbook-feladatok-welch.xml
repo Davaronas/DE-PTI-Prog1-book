@@ -1,0 +1,144 @@
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="hu">
+    <info>
+        <title>Helló, Welch!</title>
+        <keywordset>
+            <keyword/>
+        </keywordset>
+    </info>
+    <section>
+        <title>Első osztályom</title>
+        <para>
+            Valósítsd meg C++-ban és Java-ban az módosított polártranszformációs algoritmust! A matek háttér 
+            teljesen irreleváns, csak annyiban érdekes, hogy az algoritmus egy számítása során két normálist
+            számol ki, az egyiket elspájzolod és egy további logikai taggal az osztályban jelzed, hogy van vagy
+            nincs eltéve kiszámolt szám.
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:  <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/6.1.cpp">Itt</link>              
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat:
+            Fontos tudni az eljárásról, hogy egy számítási lépés két
+            normális eloszlású számot állít elő, tehát minden páratlanadik meghíváskor nem szükséges számolnunk,
+            csak az előző lépés másik számát visszaadnunk.
+            Érdekesség, hogy a Java development kit Random.java fájlában majdnem ugyanúgy van leírva ez az algoritmus.
+            g++ 'fájlnév'.cpp -o 'fáljnév' parancs kell a fordításhoz és ./'fájlnév' parancs kell a futtatás.
+            
+        </para>                
+    </section>        
+
+    <section>
+        <title>LZW</title>
+        <para>
+            Valósítsd meg C-ben az LZW algoritmus fa-építését!
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:   <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/6.2.c">Itt</link>             
+        </para>
+        <para>
+            Tanulságok: Az LZW (Lempel-Ziv-Welch) egy veszteségmentes tömörítési algoritmus, amely a program egy
+            felhasználó által beadott szöveges fájlból készít egy nullákból és egyesekből álló
+            fát. Terry Welch publikálta 1984-ben ezt az algoritmust. g++ 'fájlnév'.cpp -o 'fáljnév' a fordítás és ./'fájlnév' 'textfájlnév' a futtatás.
+        </para>
+    </section>        
+        
+    <section>
+        <title>Fabejárás</title>
+        <para>
+            Járd be az előző (inorder bejárású) fát pre- és posztorder is!
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:  <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/tree/master/6.3">Itt</link>            
+        </para>
+        <para>
+            Tanulságok:
+            Itt a lényeg hogy sorrendben járjuk be a fát. Kiírási iránya lehet postorder és preorder is, attól függően melyik programot futtatjuk.
+            Preorder bejárás azt jelenti hogy a gyökér elem majd a bal oldali részfa preorder bejárása, végül a
+             jobboldali részfa preorder bejárása. Postorder pedig úgy végezzük hogy először a bal részfa posztordert bejárjuk, majd a jobboldali részfa
+            posztordert, végül feldolgozzuk a gyökérelemet.
+            g++ 'fájlnév'.cpp -o 'fáljnév' a fordításhoz és ./'fájlnév' a futtatáshoz
+       </para>
+    </section>        
+                        
+    <section>
+        <title>Tag a gyökér</title>
+        <para>
+            Az LZW algoritmust ültesd át egy C++ osztályba, legyen egy Tree és egy beágyazott Node
+            osztálya. A gyökér csomópont legyen kompozícióban a fával!
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:  <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/6.4.cpp">Itt</link>              
+        </para>
+        <para>
+            Tanulságok:Itt a gyökér az objektum, a fa pedig mutató. Arra a csomópontra mutat a fa amelyik csomóponton járunk.
+            g++ 'fájlnév'.cpp -o 'fáljnév'-vel fordítjuk, és ./'fájlnév'-vel futtatjuk.
+       </para>
+    </section>        
+                
+    <section>
+        <title>Mutató a gyökér</title>
+        <para>
+            Írd át az előző forrást, hogy a gyökér csomópont ne kompozícióban, csak aggregációban legyen a 
+            fával!
+        </para>
+         <para>
+             Így kell átírni:
+            <programlisting language="C++"><![CDATA[
+           
+        class LZWBinfa
+{
+public:
+	LZWBinfa ()
+	{
+		gyoker = new Csomopont();
+		fa = gyoker;
+	}
+	~LZWBinfa ()
+	{
+		szabadit(gyoker->egyesGyermek ());
+		szabadit(gyoker->nullasGyermek ());
+		delete gyoker;
+	}
+            
+           
+        A gyökerek elől ki kell törölni a referencia jeleket
+       ]]></programlisting> 
+         </para>
+       <para>
+       Tanulságok: Annyi a változtatás hogy a fa gyökere is objektum, a fával együtt mostmár ez is mutató lesz.
+           Fordítás: "g++ 'fáljnév'.cpp -o 'fájlnév'". Futtatás: "./'fájlnév'"
+       </para>     
+    </section>                     
+
+    <section>
+        <title>Mozgató szemantika</title>
+        <para>
+            Írj az előző programhoz mozgató konstruktort és értékadást, a mozgató konstruktor legyen a mozgató
+            értékadásra alapozva!
+        </para>
+        <para>
+            Megoldás videó: 
+        </para>
+        <para>
+            Megoldás forrása:  <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/6.6">Itt</link>
+        </para>
+        <para>
+            Tanulságok: Itt az változik hogy van a programban egy mozgató konstruktor. A felesleges másolások elkerülésére használatos.
+           A mozgatás olcsóbb művelet mint a másolás. Fordításhoz szükség van egy BT.h nevű fájlra, amit meg lehet találni a github repomban.
+            Fordítás: "g++ 'fáljnév'.cpp -o 'fájlnév'". Futtatás: "./'fájlnév'"
+        </para>
+    </section>                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</chapter>                

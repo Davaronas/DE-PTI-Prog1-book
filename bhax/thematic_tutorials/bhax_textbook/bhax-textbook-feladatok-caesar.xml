@@ -1,0 +1,117 @@
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="hu">
+    <info>
+        <title>Helló, Caesar!</title>
+        <keywordset>
+            <keyword/>
+        </keywordset>
+    </info>
+    <section>
+        <title><type>double **</type> háromszögmátrix</title>
+        <para>
+           
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.1.c">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.1.c</link>              
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat:Az első sorában az alsó háromszögmátrixnak van egy értéke amit használ,
+            minden egyes ezt követő sorban eggyel több. Fontos hogy megadjuk a mátrix sorainak számát a legelején.
+            A szükséges memória méretet a malloc függvénnyel tudjuk lefoglalni, ezután megkapjuk a mutató mutatóját, 
+            ami rájuk mutat. Double **-val tudjuk használni, azért mert ez is egy mutató egy mutatóra. Ezt követően a 
+            sorokat megtöltük a megfelelő mennyiségű váltózókkal egy egyszerű ciklus segítségével, hogy megkapjuk az alsó mátrixot. 
+        </para>            
+    </section>        
+    <section>
+        <title>C EXOR titkosító</title>
+        <para>
+            Írj egy EXOR titkosítót C-ben!
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.2.c">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.2.c</link>>     
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ez a program C nyelvet használva titkosítja 
+            a felhasználó által megadott szöveget, az exor logikai műveleten alapszik. A kulcs maximum 100 karaktr lehet. Futtatást így végezzük
+            "./'fájlnév' 56789012 tiszta.txt titkos.szoveg"
+        </para>            
+    </section>        
+    <section>
+        <title>Java EXOR titkosító</title>
+        <para>
+            Írj egy EXOR titkosítót Java-ban!
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.3.java">Itt</link>              
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ugyanúgy
+            működik mint a C nyelben megírt EXOR titkosítók, csak Java nyelven. 
+            A felhasználó által betáplált szövegből, készít 
+            egy titkosított szöveget, egy kulcsot használva.
+        </para>            
+    </section>        
+    <section>
+        <title>C EXOR törő</title>
+        <para>
+            Írj egy olyan C programot, amely megtöri az első feladatban előállított titkos szövegeket!
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.4.c">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.4.c</link>                
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat:A C EXOR titkosító által lefordított szöveget dekódolja. Ha kiváncsiak vagyunk mennyi idő
+            alatt dekódolja, használjuk ezt a sort  "time ./'fájlnév' titkos.szoveg |grep 56789012"
+        </para>            
+    </section>        
+    <section>
+        <title>Neurális OR, AND és EXOR kapu</title>
+        <para>
+            R
+        </para>
+        <para>
+            Megoldás videó: <link xlink:href="https://youtu.be/Koyw6IH5ScQ">https://youtu.be/Koyw6IH5ScQ</link>
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.5.r">Itt</link>               
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Az OR, AND és EXOR itt műveleteket jelentenek a bináris számrendszerben.
+            Az Ésnél akkor lesz 1 ha mind a kettő számjegy 1. A Vagynál akkor ha legalább az egyik szám 1, az Exornál pedig
+            ha a két szám különbözik akkor lesz egy tehát 0 és 1, vagy 1 és 0. Több layer-ből áll a program, input, hidden (ebből lehet több is) és az output layer.
+            
+        </para>            
+    </section>        
+    <section>
+        <title>Hiba-visszaterjesztéses perceptron</title>
+        <para>
+            C++
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.6.c">https://github.com/Davaronas/DE-PTI-Prog1/blob/master/4.6.c</link>                
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat: Ez egy algoritmus, biológiai idegrendszerek szimulálására való próbálkozás
+            Az emberi agyhoz hasonlóan, csomópontok és irányított kapcsolatok egy összekapcsolt sokaságából van összerakva. 
+            Mesterséges neurális hálónak is lehet nevezni. Az emberi agy úgy tanul hogy az ugyanazon impulzus által kiváltott
+            ismétlődő stimuláció hatására változtatja a neuronok közötti szinaptikus kapcsolat erősségét, amit a program is próbál szimulálni.
+        </para>    
+           
+    </section>        
+        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</chapter>                

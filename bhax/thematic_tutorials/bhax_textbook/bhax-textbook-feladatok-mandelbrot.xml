@@ -1,0 +1,116 @@
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="hu">
+    <info>
+        <title>Helló, Mandelbrot!</title>
+        <keywordset>
+            <keyword/>
+        </keywordset>
+    </info>
+    <section>
+        <title>A Mandelbrot halmaz</title>
+        <para>
+                
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/5.1.cpp">Itt</link>              
+        </para>
+         <para>
+            Tanulságok, tapasztalatok, magyarázat: A program futtatása egy kis odafigyelést igényel
+             először ezt kell beirni: "g++ -c 'fájlnév'.cpp -lpng" ez létrehoz egy .o fájlt, amit ezután ezzel
+             a kóddal kell lefordítani: "g++ -o 'fájlnév' 'fájlnév'.o". Ezt követően pedig futtassuk így: "./fájlnév".
+             Kimenetként egy képet fogunk kapni, amit elment abba a mappába amiben lefutattuk. A program azt csinálja, hogy
+             azokat a számokat, amire a kódban lévő képlet igaz, kiszínezi.
+        </para>    
+    </section>        
+        
+    <section>
+        <title>A Mandelbrot halmaz a <filename>std::complex</filename> osztállyal</title>
+        <para>
+                
+        </para>
+        <para>
+            Megoldás videó:
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/5.2a.cpp">Itt</link>              
+        </para>
+         <para>
+            Tanulságok, tapasztalatok, magyarázat: Forditás:
+            g++ fájlnév.cpp -lpng -O3 -o fájlnév. Futtatásra egy példa:
+            ./fájlnév mandel.png 1920 1080 2040 -0.01947381057309366392260585598705802112818 
+             -0.0194738105725413418456426484226540196687 0.7985057569338268601555341774655971676111
+             0.798505756934379196110285192844457924366. Ugyanaz mint a az előző feladat, csak
+            komplex számokat használ. A fordítást és futtatást hasonlóan végezzük. C-ben minden
+            komplex számnak van egy valós (real) és egy imaginárius (imag) része, amelyet meg kell adnunk
+            mikor deklarálunk egyet.
+        </para>
+    </section>        
+                
+    <section>
+        <title>Biomorfok</title>
+        <para>
+        </para>
+        <para>
+            Megoldás videó: <link xlink:href="https://youtu.be/IJMbgRzY76E">https://youtu.be/IJMbgRzY76E</link>
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/5.3.cpp">Itt</link>
+        </para>
+        <para>
+            Tanulságok, tapasztalatok, magyarázat:A biomorfokat Clifford Pickover fedezte fel. Itt a g++-t kell használatba vennük a fordításhoz,
+            így:  "g++ 'fájlnév'.cpp -lpng -03 'fájlnév'" paranccsal fordítsuk, aztán 
+            "./'fájlnév' 'bármi'.png 800 800 10 -2 2 -2 2 .285 0 10" paranccsal futtathatjuk. 
+        </para>                        
+    </section>                     
+
+    <section>
+        <title>A Mandelbrot halmaz CUDA megvalósítása</title>
+        <para>
+        </para>
+        <para>
+            Megoldás videó: 
+        </para>
+        <para>
+            Megoldás forrása:<link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/5.4.cu">Itt</link>  
+        </para>
+        <para>
+            Tanulságok: Az előző feladatokban használt mandelbrot halmazokhoz képest itt az a különbség hogy az nvdia által fejlesztett CUDA magokat használjuk fel. A CUDA egy párhuzamos számítástechnikai platform és API model, az nvidia által készítve. A CUDA platform egy szofter réteg, ami közvetlen hozzáférést ad a videókártya virtuális utasításkészletéhez. A CUDA platform úgy lett elkészítve, hogy tökéletesen illeszkedjen a C és C++ nyelvekre.
+            Ezt a feladatot a fentiek miatt csakis  nvidiás kártyával tudjuk lefuttatni, így: nvcc 'fájlnév'.cu. Futtatás pedig ./'kimenetnév' 'képneve'.png
+        </para>
+    </section>                     
+
+    <section>
+        <title>Mandelbrot nagyító és utazó C++ nyelven</title>
+        <para>
+            Építs GUI-t a Mandelbrot algoritmusra, lehessen egérrel nagyítani egy területet, illetve egy pontot
+            egérrel kiválasztva vizualizálja onnan a komplex iteréció bejárta z<subscript>n</subscript> komplex számokat!
+        </para>
+            
+
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/5.5.cpp">Itt</link>
+        </para>
+        <para>
+            Megoldás videó: 
+        </para>
+        <para>
+            Tanulságok, tapasztalatok:  Ez is ugyanaz mint az előző feladatok, viszont itt lehet végtelenségig nagyítani a képet, de nem úgy nagyítja hogy csak ráközelít, 
+            hanem minden egyes közelítéssel újra is rajzolla a képet. Fordítás: "g++ 'fájlnév'.cpp -lpng -o 'fájlnév'". Futtathatjuk a default értékekkel, így :"./'fájlnév' 'képneve'.png" ekkor
+            a program ki is írja nekünk hogy a default értékeket használja, de viszont a felhasználó is megadhat a programnak adatokat,
+            ezeket hogy hogyan kell megadni szintén a program értesít minket. 
+        </para>
+    </section>                     
+                                                                                                                                                                            
+    <section>
+        <title>Mandelbrot nagyító és utazó Java nyelven</title>
+        <para>
+            Megoldás forrása: <link xlink:href="https://github.com/Davaronas/DE-PTI-Prog1/blob/master/5.6.java">Itt</link>
+        </para>
+        <para>
+            Tanulságok, tapasztalatok: Ugyanaz mint a Mandelbrot csak Javaban. Ugyanazokat el lehet mondani mint az előző feladatoknál. Az előző programhoz hasonlóan, a kiszámolt és kirajzolt Mandelbrot halmaz valamely részét fogjuk kinagyítani, aztán onnan is nagyíthatunk egy általunk választott pontjára, és így tovább ameddig szeretnénk. A bal egérgomb lenyomásával, és tartásával kijelölhetünk egy területet, és ezt a területet fogja nekünk a program kinagyítani. A MousePressed() és a MouseReleased() funkciók kerülnek felhasználásra, ezek alapján számolja ki a területet, amire rá kell nagyítani.
+        </para>
+    </section>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</chapter>                
